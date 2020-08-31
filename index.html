@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <title>Admin Panel</title>
+	<style type="text/css">
+	#services li:hover
+	{
+		cursor:pointer;
+	}
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row bg-success" id="nav-bar">
+			<div class="col-4 p-4">
+				<h3 style="margin:auto;color:#EEEEEE;text-align:center;">Kishan App Admin Panel</h3>
+			</div>
+			<div class="col-8 p-4">
+				<div class="bg-light col-4 p-1 pl-3" style="border-radius:20px;margin-left: 55%;opacity:0.7;">
+				Search
+				</div>
+			</div>
+		</div>
+		<div class="row" id="content">
+			<div class="col-3 p-5" id="side-bar" style="border-right: solid 1px green;">
+				<h4 class="p-3">Services</h4>
+				<ul style="list-style-type:none;" id="services">
+					<li class="pb-4" style="font-weight:bold;color:green;">User Details</li>
+					<li class="pb-4">News</li>
+					<li class="pb-4">Weather Details</li>
+					<li class="pb-4">Crop Details</li>
+					<li class="pb-4">Crop Price</li>
+					<li class="pb-4">Market Yards</li>
+					<li class="pb-4">RSS Feed</li>
+				</ul>
+			</div>
+			<div class="col-9 p-5" id="content-table">
+				<h3 class="pb-3">User Details</h3>
+				<button class="btn bg-success p-2 mb-3" style="color:white;">+ Add User</button>
+				<!-- The core Firebase JS SDK is always required and must be listed first -->
+				<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+				<!-- TODO: Add SDKs for Firebase products that you want to use
+				https://firebase.google.com/docs/web/setup#available-libraries -->
+				<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+
+				<script>
+				// Your web app's Firebase configuration
+				var firebaseConfig = {
+				apiKey: "AIzaSyBurKTYXPL8ol3qUMpLHghXQqZynwlLhms",
+				authDomain: "kishan-app-19493.firebaseapp.com",
+				databaseURL: "https://kishan-app-19493.firebaseio.com",
+				projectId: "kishan-app-19493",
+				storageBucket: "kishan-app-19493.appspot.com",
+				messagingSenderId: "1005481197210",
+				appId: "1:1005481197210:web:7aaa6a0c6356f5e4022923",
+				measurementId: "G-NQ2MB8Z8EZ"
+				};
+				// Initialize Firebase
+				firebase.initializeApp(firebaseConfig);
+				</script>
+				<table class="table table-hover table-responsive table-bordered">
+					<thead class="thead-light">
+						<tr>
+							<th>Sr no.</th>
+							<th>Email</th>
+							<th>Password</th>
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th>Address</th>
+							<th>City</th>
+							<th>State</th>
+							<th>Country</th>
+							<th>Phone</th>
+							<th>Registration Date</th>
+						</tr>
+					</thead>
+					<tbody id="table-body">
+					<script src="firebase/users.js"></script>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="row bg-success p-4" id="footer">
+			<p style="margin:auto;text-align:center;color:white;">Copyright. All rights reserved.</p>
+		</div>
+	</div>
+</body>
+</html>
