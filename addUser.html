@@ -32,34 +32,29 @@
 				</ul>
 			</div>
 			<div class="col-9 p-5" id="content-table">
-				<h3 class="pb-3">User Details</h3>
-				<button class="btn bg-success p-2 mb-3" style="color:white;">+ Add User</button>
+				<h3 class="pb-3">Add User</h3>
 				<!-- The core Firebase JS SDK is always required and must be listed first -->
 				<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
 
 				<!-- TODO: Add SDKs for Firebase products that you want to use
 				https://firebase.google.com/docs/web/setup#available-libraries -->
 				<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+				
+				<!-- For authentication -->
+				<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
 
 				<script src="firebase/config.js"></script>
-				<div class="table-responsive">
-					<table class="table table-hover table-bordered">
-						<thead class="thead-light">
-							<tr>
-								<th>Sr no.</th>
-								<th>Email</th>
-								<th>Name</th>
-								<th>Place</th>
-								<th>District</th>
-								<th>State</th>
-								<th>Zipcode</th>
-							</tr>
-						</thead>
-						<tbody id="table-body">
-							<script src="firebase/users.js"></script>
-						</tbody>
-					</table>
-				</div>
+				
+				<input type="text" id="name" placeholder="Your Name" class="form-control col-6"/><br/>
+				<input type="email" id="email" placeholder="Your Email Id" class="form-control col-6"/><br/>
+				<input type="password" id="password" placeholder="Password" class="form-control col-6"/><br/>
+				<input type="text" id="place" placeholder="Your Place (City)" class="form-control col-6"/><br/>
+				<input type="text" id="district" placeholder="Your District" class="form-control col-6"/><br/>
+				<input type="text" id="state" placeholder="Your State" class="form-control col-6"/><br/>
+				<input type="text" id="zipcode" placeholder="Zipcode" class="form-control col-6"/><br/>
+				<button class="btn btn-success" id="add">Add User</button>
+				
+				<script src="firebase/createUser.js"></script>
 			</div>
 		</div>
 		<div class="row bg-success p-4" id="footer">
